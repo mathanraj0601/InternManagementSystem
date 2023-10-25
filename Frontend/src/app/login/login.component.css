@@ -1,0 +1,120 @@
+.login
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.login-welcome
+{
+    height: 100%;
+    flex:45%;
+    background-color: #E9F1FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login-form
+{
+    flex:55%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+
+.login-welcome-content
+{
+    width: 70%;
+    height: auto;
+    text-align: center;
+}
+
+
+.login-form-content
+{
+    height: auto;
+    width: auto;
+    padding: 5% 10%;
+    background-color: #E9F1FA;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+.login-form-content h1{
+    text-align: center;
+}
+
+.login-form-content > a
+{
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+.login-form-content > input{
+    margin:10px 0px;
+    width: 300px;
+    height: 30px;
+    border:0px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.login-form-btn{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+  
+
+}
+
+.login-form-btn > button{
+    padding: 5px 20px ;
+    border:0px;
+    background-color: white;
+
+}
+
+
+@media screen  and (max-width:800px) {
+
+
+    .login-welcome
+    {
+        flex:100%;    
+    }
+
+
+    .login-form
+    {
+        flex:100%;
+    }
+    
+}
+
+.error
+{
+    margin-top: 10px;
+    color: red;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width:400px) {
+    .login-form-content
+    {
+        box-shadow:none;
+    }
+}

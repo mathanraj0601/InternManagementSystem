@@ -1,0 +1,74 @@
+<div class="ticket-title">
+    <span class="ticket-title-name">Ticket</span>
+    <div class="ticket-title-filter">
+        <!-- Admin only -->
+        <select #mySelect (change)="selectFilter(mySelect.value)" *ngIf="currentUser.role.toLowerCase() === 'admin'" >
+            <option  value="1">All</option>
+            <option  value="2">Un Answered</option>
+        </select>
+        &nbsp;
+        <label for="ticket-title-filter-user" class="user-lbl" *ngIf="currentUser.role.toLowerCase() === 'admin'" >
+            User : 
+       </label>
+       <input type="text" class="ticket-title-filter-user" placeholder="User to filter" [(ngModel)]="ticketFilterDTO.userID" *ngIf="currentUser.role.toLowerCase() === 'admin'" >
+       &nbsp;
+       <!-- Both intern and admin -->
+       <label for="ticket-title-filter-date" class="date-lbl">
+           Date : 
+      </label>
+      <input type="date" class="ticket-title-filter-date" [(ngModel)]="ticketFilterDTO.date">
+      
+      <button class="log-title-filter-btn" (click)="filter()" [disabled]="btnStatus">
+        <i class="bi bi-funnel"></i>
+   </button>
+   <button  class="log-title-filter-btn" (click)="clear()"  [disabled]="!btnStatus">
+    <i class="bi bi-x-circle"></i>
+   </button>
+    </div>
+   
+ </div>
+
+ <div class="ticket-content-intern" *ngIf="currentUser.role.toLowerCase() === 'intern'">
+    <!-- intern only -->
+    <p>Raise New Ticket</p>
+    <div class="ticket-content-intern-input">
+        <input type="text"  [(ngModel)]="ticket.issueTitle" placeholder="Enter the issue title" >
+    </div>
+    <div class="ticket-content-intern-text-area">
+        <textarea rows="4" placeholder="Enter the issue detail" [(ngModel)]="ticket.issueDetails"></textarea>
+    </div>
+    <div class="ticket-content-intern-btn">
+        <button class="ticket-content-intern-btn-reset" (click)="reset()">  Reset </button> &nbsp;
+        <button class="ticket-content-intern-btn-raise" (click)="raise()"> Raise New Ticket</button>
+    </div>
+ </div>
+ <br>
+ <div class="ticket-content-list">
+        <!-- both intern and admin -->
+    <p class="ticket-content-list-title"> Ticket and Solution</p>
+    <div class="no-ticket" *ngIf="tickets.length == 0"> No ticket Found</div>
+    <div class="ticket-content-list-element" *ngFor="let ticket of tickets, let i=index">
+        <div class="ticket-content-question">
+            <h6>Issue : {{i}}</h6>
+            <p> Title :{{ticket.issueTitle}}</p>
+            <p> Details: {{ticket.issueDetails}}</p>
+        </div>
+        <hr>
+        <h6> Solution </h6>
+        <div class="ticket-content-answers" *ngFor="let solution of ticket.solutions ">
+            <div class="ticket-content-answer">
+                <p *ngIf="solution.ticketID== ticket.ticketID"> {{solution.userID}} : {{solution.solutionProvided}}</p>
+            </div>   
+        </div>
+        <div class="ticket-content-answer-admin" *ngIf="currentUser.role.toLowerCase() === 'admin'">
+            <textarea rows="3" placeholder="enter the answer" [(ngModel)]="soluitonInput[i]" > </textarea>
+            <div class="ticket-content-answer-admin-btn">
+                <button class="ticket-content-answer-admin-btn-clear"(click)="clearTextArea(i)"> clear </button>
+                <button class="ticket-content-answer-admin-btn-answer" (click)="answerTextArea(ticket,i)"> Answer </button>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+

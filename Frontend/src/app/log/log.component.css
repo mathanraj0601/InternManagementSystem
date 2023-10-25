@@ -1,0 +1,87 @@
+.log-table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  .log-content
+  {
+    overflow-x: auto;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr{
+    border-bottom: 1px solid black;
+  }
+
+  thead
+  {
+    background-color: #E9F1FA;
+  }
+
+  .log-content
+  {
+    padding: 0% 2%;
+  }
+
+  .log-title
+  {
+    padding: 1% 2%;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+ 
+
+  .log-title-name
+  {
+    font-weight: 700;
+    font-size: xx-large;
+  }
+
+  .log-title-filter
+  {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .log-title-filter-user
+  {
+    width: 119px;
+    padding:2px;
+    margin-bottom: 2px;
+  }
+
+  .log-title-filter-date
+  {
+    margin-bottom: 2px;
+  }
+
+  .log-title-filter-btn
+  {
+    padding: 1px 10px;
+    margin: 0 2px ;
+    border: none;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .log-title-filter-btn> i{
+    font-weight: bolder;
+  }
+  .no-logs
+  {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center ;
+  }
+
+  table{
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+ 
+ }
+

@@ -1,0 +1,63 @@
+<div class="intern-title">
+   <span class="intern-title-name">Interns</span>
+   <span class="intern-title-filter">
+        Filter : &nbsp;
+   </span>
+   <span> 
+    <select #mySelect (change)="selectFilter(mySelect.value)">
+        <option  value="1">Full</option>
+        <option  value="2">unApproval</option>
+        <option  value="3">Approval</option>
+    </select>
+   </span>
+  
+</div>
+<div class="intern-content">
+    <table class="intern-table">
+        <thead class="intern-table-head">
+            <tr>
+                <th>
+                    Intern ID
+                </th>
+                <th>
+                    Intern Name 
+                </th>
+                <th>
+                    Intern DOB
+                </th>
+                <th>
+                    Intern Gender
+                </th>
+                <th *ngIf="false">
+                    Approval Status
+                </th>
+                <th>
+                    Approve
+                </th>
+            </tr>
+        </thead>
+        <tbody class="intern-table-body" *ngFor="let intern of interns ; let i=index">
+            <tr>
+                <td>
+                    {{intern.internId}}
+                </td>
+                <td>
+                   {{intern.name}}
+                </td>
+                <td>
+                    {{intern.dateOfBirth}}
+                </td>
+                <td>
+                    {{intern.gender}}
+                </td>
+                <td>    
+                    <button (click)="unApprove(i)" class="intern-table-body-btn" *ngIf="intern.user.status == true" >unApprove</button>
+                    <button (click)="approve(i)"  class="intern-table-body-btn" *ngIf="intern.user.status == false"> Approve </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div  class="no-interns" *ngIf="interns.length ==0">
+        No record for logs
+     </div >
+</div>

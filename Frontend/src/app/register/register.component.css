@@ -1,0 +1,123 @@
+.Register
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    height: 100vh;
+}
+
+input:-webkit-autofill{
+    transition: background-color 5000s ease-in-out 0s;
+}
+.Register-welcome
+{
+    height: 100%;
+    flex:45%;
+    background-color: #E9F1FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:20px 20px 2px 2px black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);;
+}
+
+
+.Register-form
+{
+    flex:55%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
+.Register-welcome-content
+{
+    width: 70%;
+    height: auto;
+    text-align: center;
+}
+
+
+.Register-form-content
+{
+    height: auto;
+    width: auto;
+    padding: 5% 10%;
+    background-color: #E9F1FA;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+.Register-form-content h1{
+    text-align: center;
+}
+
+.Register-form-content > a
+{
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+.Register-form-content > input{
+    margin:10px 0px;
+    width: 300px;
+    height: 30px;
+    border:0px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+.Register-form-btn{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+  
+
+}
+.Register-form-date
+{
+    padding: 30px;
+    height: 40px;
+}
+.Register-form-btn > button{
+    padding: 5px 20px ;
+    border:0px;
+    background-color: white;
+
+}
+
+.validation
+{
+    font-size: 10px;
+    color: red;
+}
+@media screen  and (max-width:800px) {
+
+    .Register-welcome
+    {
+        flex:100%;    
+    }
+
+
+    .Register-form
+    {
+        flex:100%;
+    }
+    
+}
+
+@media screen and (max-width:400px) {
+    .login-form-content
+    {
+        box-shadow:none;
+    }
+}

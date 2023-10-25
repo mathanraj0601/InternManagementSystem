@@ -1,0 +1,60 @@
+.intern-table {
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  .intern-content
+  {
+    overflow-x: auto;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr{
+    border-bottom: 1px solid black;
+  }
+
+  thead
+  {
+    background-color: #E9F1FA;
+  }
+
+  .intern-content
+  {
+    padding: 0% 2%;
+  }
+
+  .intern-title
+  {
+    padding: 1% 2%;
+    display: flex;
+    align-items: flex-end;
+  }
+ 
+
+  .intern-title-name
+  {
+    font-weight: 700;
+    font-size: xx-large;
+  }
+
+  .intern-title-filter
+  {
+    margin-left: auto;
+  }
+
+  .no-interns
+  {
+    margin-top: 10px;
+
+    text-align: center;
+  }
+
+  table{
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+ 
+ }

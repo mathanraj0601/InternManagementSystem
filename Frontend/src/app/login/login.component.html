@@ -1,0 +1,40 @@
+    <div class="login">
+        <div class="login-welcome">
+            <div class="login-welcome-content">
+                <h1>
+                    <b>Welcome to Intern Management System</b>
+                </h1>
+                <br>
+                <hr>
+                <p>
+                    <i>Welcome to the Internship Management System! Please log in to access your account and manage your internships. If you don't have an account yet, you can register below.</i>
+                </p>
+            </div>
+        </div>
+        <div class="login-form">
+            <div class="login-form-content">
+                <h1>Login</h1>
+                <br>
+                <hr>
+                <br>
+                <label for="login-form-id">Enter your Id</label>
+                <br>
+                <input class="login-form-id" type="number" [(ngModel)]="user.userID" placeholder="Enter the ID"/>
+                <br>
+                <label for="login-form-password">Enter Your password</label>
+                <br>
+                <input class="login-form-password" type="password" [(ngModel)]="user.password" placeholder="Enter password" />
+                <br>
+                <a class="login-form-link" (click)="register()">Move to Register</a>
+                <br>
+                <div class="login-form-btn">
+                    <button class="login-form-submit" (click)="Login()">Login</button>
+                    <button class="login-form-clear" (click)="Clear()">Clear</button>
+                </div>
+                <div class="error">
+                    {{message}}
+                </div>
+            </div>
+           
+        </div>
+    </div>

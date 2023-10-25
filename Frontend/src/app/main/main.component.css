@@ -1,0 +1,50 @@
+header
+{
+    height: 100px;
+    text-align: center;
+    font-size: xx-large;
+    padding: 1%;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+nav{
+    display: flex;
+    background-color: #E9F1FA;
+    height: auto;
+    padding:5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+
+
+}
+nav > span{
+    padding:0px 30px ;
+}
+.nav-item5
+{
+    margin-left: auto;
+}
+
+main{
+    height: 100%;
+}
+
+span
+{
+    font-weight: bold;
+}
+
+@media screen and (max-width:400px) {
+    nav{
+        align-self: center;
+        
+    }
+    nav > span{
+        padding:0px 12px ;
+    }
+    
+}

@@ -1,0 +1,86 @@
+<div class="Register">
+    <div class="Register-welcome">
+        <div class="Register-welcome-content">
+            <h1>
+                <b>Welcome to Intern Management System</b>
+            </h1>
+            <br>
+            <hr>
+            <p>
+                <i>Welcome to the Internship Management System! Registering an account allows you to take full advantage of our system. Create your account now to begin managing your internships, tracking your progress, and connecting with potential employers.</i>
+            </p>
+        </div>
+    </div>
+    <div class="Register-form">
+        <div class="Register-form-content">
+            <h1>Register</h1>
+            <br>
+            <hr>
+            <br>
+            <label for="Register-form-id">Enter your Name</label>
+            <br>
+            <input class="Register-form-id" type="text" [(ngModel)]="intern.name"  #nameField="ngModel"/>
+            <br>
+            <div class="validation" *ngIf="intern.name?.length > 0 && !intern.name.match('^[A-Za-z. ]+$')" >
+                Name should contain spaces, dots, and alphabets only.
+            </div>
+            <div class="validation" *ngIf="nameField.touched && intern.name.length == 0">
+                Name is required.
+              </div>
+
+
+            <label for="Register-form-date">Enter Your Date of Birth</label>
+            <br>
+            <input class="Register-form-date" type="date" [(ngModel)]="intern.dateOfBirth"  #dobField="ngModel"/>
+            <br>
+            <div *ngIf="IsValidAge() && dobField.touched " class="validation">
+                Date of Birth should be greater than 18 years ago.
+              </div>
+
+            <label>
+                Gender : &nbsp;
+            </label>
+
+
+            <label for="male"> 
+            <input  class="male" name="gender" type="radio" value="male" [(ngModel)]="intern.gender">  Male 
+            </label>&nbsp; &nbsp; 
+            <label for="female"> 
+                <input  class="female" name="gender" type="radio" value="female" [(ngModel)]="intern.gender">  Female 
+            </label>
+            <br>
+
+            <label for="Register-form-email">Enter your Email</label>
+            <br>
+            <input class="Register-form-email" type="email" [(ngModel)]="intern.email" #emaiField="ngModel"/>
+            <br>
+            <div class="validation" *ngIf="intern.email.length > 0 && !intern.email.match('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')" >
+                Invalid email format
+            </div>
+            <div class="validation" *ngIf="emaiField.touched && intern.email.length == 0">
+                email is required.
+            </div>
+
+
+
+            <label for="Register-form-phone">Enter your Phone Number</label>
+            <br>
+            <input class="Register-form-phone" type="tel" [(ngModel)]="intern.phone" #phoneField="ngModel"/>
+            <br>
+            <div class="validation" *ngIf="intern.phone.length !=10 && !intern.phone.match('^\d{10}$')" >
+                Phone number should be 10 digit
+             </div>
+            <div class="validation" *ngIf="phoneField.touched && intern.phone.length == 0">
+                Phone number is required.
+            </div>
+
+            <a class="Register-form-link" (click)="login()">Move to Login</a>
+            <br>
+            <div class="Register-form-btn">
+                <button class="Register-form-submit" (click)="Register()"> Register</button>
+                <button class="Register-form-clear" (click)="Clear()"> Clear</button>
+            </div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,14 @@
+div{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #E9F1FA;
+}
+h4{
+    text-align: center;
+}
+
+i{
+    font-size: 50px;
+}

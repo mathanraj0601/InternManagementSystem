@@ -1,0 +1,16 @@
+<header>
+    Intern Management System
+</header>
+<nav>
+    <span class="nav-item1" (click)="log()"><i class="bi bi-person-lines-fill"> </i> &nbsp;<span *ngIf="word"> Log </span></span>
+    <span class="nav-item2" (click)="ticket()"> <i class="bi bi-ticket"> </i> &nbsp; <span *ngIf="word">Ticket</span>  </span>
+    <span *ngIf="userRole.toLowerCase() === 'admin'" class="nav-item3" (click)="intern()"> <i class="bi bi-people"> </i> &nbsp; <span *ngIf="word">Intern</span> </span>
+    <span class="nav-item4" (click)="update()"><i class="bi bi-lock"> </i> &nbsp;<span *ngIf="word">Update Password</span></span>
+    <span class="nav-item5" (click)="logout()">
+        <i class="bi bi-power"></i>  &nbsp;
+        <span *ngIf="word">Log out</span>
+    </span>
+
+
+</nav>
+<router-outlet></router-outlet>

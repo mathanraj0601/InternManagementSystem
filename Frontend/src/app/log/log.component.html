@@ -1,0 +1,63 @@
+<div class="log-title">
+    <span class="log-title-name">Logs</span>
+    <div class="log-title-filter">
+        <label for="log-title-filter-user" class="user-lbl" *ngIf="curUser.role.toLowerCase() == 'admin'">
+            User : &nbsp;
+       </label>
+       <input *ngIf="curUser.role.toLowerCase() == 'admin'" type="number" class="log-title-filter-user" placeholder="User to filter" [(ngModel)]="logFilter.userID" >
+       &nbsp;
+       <label for="log-title-filter-date-lbl" class="date-lbl">
+           Date : &nbsp;
+      </label>
+      <input type="date" class="log-title-filter-date" [(ngModel)]="logFilter.date" >
+      &nbsp;
+      <button class="log-title-filter-btn" (click)="filter()" [disabled]="btnStatus">
+        <i class="bi bi-funnel"></i>
+      </button>
+      <button  class="log-title-filter-btn" (click)="clear()"  [disabled]="!btnStatus">
+        <i class="bi bi-x-circle"></i>
+      </button>
+    </div>
+   
+ </div>
+ <div class="log-content">
+     <table class="log-table">
+        
+         <thead class="log-table-head">
+             <tr>
+                 <th>
+                     Log User 
+                 </th>
+                 <th>
+                     Log In
+                 </th>
+                 <th>
+                     Log Out
+                 </th>
+                 <th>
+                      Date
+                 </th>
+             </tr>
+         </thead>
+         
+         <tbody class="intern-table-body" *ngFor="let log of logs">
+             <tr>
+                 <td>
+                     {{log.userID}}
+                 </td>
+                 <td>
+                    {{(log.logInTime)}}
+                 </td>
+                 <td>
+                    {{log.logOutTime}}
+                 </td>
+                 <td>
+                     {{log.date}}
+                 </td>
+             </tr>
+         </tbody>
+     </table>
+     <div class="no-logs" *ngIf="logs.length ==0">
+        No record for logs
+</div >
+ </div>

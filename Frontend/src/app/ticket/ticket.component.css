@@ -1,0 +1,176 @@
+  .ticket-content
+  {
+    overflow-x: auto;
+  }
+
+
+  .ticket-content
+  {
+    padding: 0% 2%;
+  }
+
+  .ticket-title
+  {
+    padding: 1% 2%;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+ 
+ 
+
+  .ticket-title-name
+  {
+    font-weight: 700;
+    font-size: xx-large;
+  }
+
+  .ticket-title-filter
+  {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .ticket-title-filter-user
+  {
+    width: 119px;
+    padding:2px;    
+    margin:2px 3px;
+  }
+
+  .ticket-title-filter-date
+  {
+    margin-bottom: 2px;
+  }
+
+  .ticket-title-filter-btn
+  {
+    padding: 1px 10px;
+    margin: 0 3px ;
+  }
+
+.ticket-content-intern
+{
+    margin: 0% 2%;
+    padding: 1% 1%;
+    background-color: #E9F1FA;
+}
+
+.ticket-content-intern-input > input
+{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 2px;
+    border: 1px solid lightgray;
+}
+
+.ticket-content-intern-text-area > textarea
+{
+    width: 100%;
+    padding: 0 2px;
+    border: 1px solid lightgray;
+ 
+}
+.ticket-content-intern-btn 
+{
+    width: 100%;
+    text-align: right;
+}
+
+.ticket-content-intern-btn  > button
+{
+   padding: 0px 20px ;
+   text-decoration: none;
+   border: 1px solid lightgray;
+   background-color: white;
+}
+ .ticket-content-intern > p
+ {
+    font-size: x-large;
+    font-weight: 500;
+    border-bottom: 2px solid lightgray;
+ }
+
+
+
+ .ticket-content-list-title
+ {
+    font-size: x-large;
+    font-weight: 500;
+    border-bottom: 2px solid lightgray;
+ }
+ .ticket-content-list
+ {
+    padding: 0% 2%;
+    margin: 0% 1%;
+
+ }
+
+ .ticket-content-list-element
+ {
+    background-color: #E9F1FA;
+    padding: 1% 2%;
+    margin-bottom: 10px;
+ }
+
+ .ticket-content-list-element p
+ {
+  
+    margin-bottom: 0px;
+ }
+
+ .ticket-content-answer-admin > textarea
+ {
+    width: 100%;
+    border: 1px solid lightgray;
+ }
+
+ .ticket-content-answer-admin-btn
+ {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+ }
+
+ .ticket-content-answer-admin-btn-clear
+ {
+    margin-left: auto;
+ }
+
+ 
+ .ticket-content-answer-admin-btn > button
+{
+   padding: 0px 20px ;
+   text-decoration: none;
+   border: 1px solid lightgray;
+   background-color: white;
+}
+
+.no-ticket
+{
+   text-align: center;
+}
+
+button
+{
+   padding: 1px 10px;
+   margin: 0 2px ;
+   border: none;
+   background-color: white;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.ticket-content-intern
+{
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+}
+
+.ticket-content-list-element
+{
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+
+}
